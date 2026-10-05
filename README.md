@@ -101,7 +101,7 @@ psql -d expense_audit -f trasas_assignment.sql
 File SQL tạo đủ 6 bảng: `processing_jobs`, `documents`, `document_extractions`,
 `audit_runs`, `validation_issues`, `validation_issue_documents`.
 
-### Buc 2 — Backend
+### Bước 2 — Backend
 
 ```bash
 python -m venv .venv
@@ -110,7 +110,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Tạo file cấu hình (file `.env` đã được gitignore, **không commit**):
+Tạo file cấu hình:
 
 ```bash
 cp .env.example .env        # Windows: Copy-Item .env.example .env
@@ -133,7 +133,7 @@ uvicorn app.main:app --reload
 - Swagger UI: http://127.0.0.1:8000/docs
 - Health check: http://127.0.0.1:8000/health
 
-### Buc 3 — Frontend
+### Bước 3 — Frontend
 
 ```bash
 cd frontend

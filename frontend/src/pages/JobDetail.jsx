@@ -130,7 +130,18 @@ export default function JobDetail() {
     job, issues = [], issue_totals: totals = {},
     documents = [], report, has_report: hasReport,
   } = data;
-  const sev = totals.by_severity || {};
+  // Header error stats describe the run on screen. In history mode the backend
+  // already scopes issue_totals to the viewed run; outside history mode
+  // issue_totals sums every compare run, so use the latest run's own counts.
+  const latestRun = runs[0] || null;
+  const headerTotals =
+    !isHistory && latestRun
+      ? {
+          total: latestRun.issue_count ?? 0,
+          by_severity: latestRun.issue_count_by_severity || {},
+        }
+      : totals;
+  const sev = headerTotals.by_severity || {};
   // stats describe the run currently on screen (latest unless in history mode)
   const summary = report?.summary || {};
   const activeDoc = documents.find((d) => d.id === selected) || null;
@@ -173,8 +184,8 @@ export default function JobDetail() {
         <Stat label="Lần kiểm tra" value={runs.length} />
         <Stat
           label="Lỗi lần này"
-          value={totals.total ?? 0}
-          tone={totals.total ? "HIGH" : "LOW"}
+          value={headerTotals.total ?? 0}
+          tone={headerTotals.total ? "HIGH" : "LOW"}
         />
         <Stat label="HIGH" value={sev.HIGH ?? 0} tone={sev.HIGH ? "HIGH" : "LOW"} />
         <Stat label="MEDIUM" value={sev.MEDIUM ?? 0} tone={sev.MEDIUM ? "MEDIUM" : "LOW"} />

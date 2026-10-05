@@ -83,7 +83,7 @@ export default function JobList() {
             <thead>
               <tr>
                 {["Mã / Tên Job", "Thời gian tạo", "Số chứng từ",
-                  "Mừc độ rủi ro", "Trạng thái", "Lỗi", "Thao tác"].map((h) => (
+                  "Mức độ rủi ro", "Trạng thái", "Lỗi", "Thao tác"].map((h) => (
                   <th
                     key={h}
                     className={`border-b border-slate-800 bg-slate-800/60 px-4 py-3 text-[11px] uppercase tracking-wider text-slate-400 ${
