@@ -321,4 +321,8 @@ OpenAI SDK (trỏ sang endpoint tương thích của Gemini), psycopg 3
 
 ## 12. Demo
 
-[![Demo Video](https://img.youtube.com/vi/oxPfaEdITt4/hqdefault.jpg)](https://www.youtube.com/watch?v=oxPfaEdITt4)
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=oxPfaEdITt4" target="_blank">
+    <img src="https://img.youtube.com/vi/oxPfaEdITt4/hqdefault.jpg" alt="Demo Video" width="600" />
+  </a>
+</div>
