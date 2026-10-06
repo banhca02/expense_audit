@@ -316,3 +316,9 @@ do LLM quyết định — vì định dạng chứng từ rất đa dạng, quy
 OpenAI SDK (trỏ sang endpoint tương thích của Gemini), psycopg 3
 
 **Frontend:** React 18, React Router 6, Vite 5, Tailwind CSS 4
+
+---
+
+## 12. Demo
+
+[![Demo Video](https://img.youtube.com/vi/oxPfaEdITt4/hqdefault.jpg)](https://www.youtube.com/watch?v=oxPfaEdITt4)
